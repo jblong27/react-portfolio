@@ -55,6 +55,7 @@ nav {
   --primary-dark: rgb(255, 255, 255, 0);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
+  --primary-black: #000000;
 }
 
 
@@ -103,7 +104,7 @@ nav ul li {
 
 .header-wrapper {
   position: relative;
-  background: url(laptop.jpg) no-repeat;
+  background: url(../src/images/laptop.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -170,7 +171,9 @@ nav ul li {
 }
 
 /***** About Me ******/
-
+.about-me-wrapper {
+  background: var(--primary-light-grey);
+}
 .photo-wrap {
   display: flex;
   justify-content: center;
@@ -290,4 +293,55 @@ nav ul li {
     float: none;
     direction: ltr;
   }
+}
+
+/***** Media *******/
+
+.portfolio-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-image {
+  width: 15rem;
+  border: 1px solid var(--primary-green);
+  padding:  0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/***** Overflow box *******/
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 15rem;
+  height: 12.5rem;
+  top: 0;
+  border: 1px solid var(--primary-red);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 5.2rem;
+  color: var(--primary-green);
+  font-size: 1.5em;
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
