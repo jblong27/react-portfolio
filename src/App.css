@@ -63,6 +63,10 @@ body {
   font-family: 'Open Sans', sans-serif !important;
 }
 /***** Menu Links *****/
+nav a {
+  text-decoration: none !important;
+}
+
 nav a.nav-link {
   letter-spacing: 0.0375rem;
   cursor: pointer;
@@ -91,7 +95,7 @@ nav ul li {
   }
 }
 
-.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
+.navbar-nav > li > a.active, .navbar-nav > li > a:focus {
   border-top: .1875rem solid var(--primary-green);
 }
 
