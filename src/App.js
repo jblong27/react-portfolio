@@ -5,7 +5,8 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import Resume from './components/Resume'
-import Portfolio from './components/Portfolio';
+import Portfolio from './components/Portfolio'
+import ContactMe from './components/ContactMe'
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <AboutMe />
       <Resume />
       <Portfolio />
+      <ContactMe />
 
     </>
   );
