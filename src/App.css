@@ -107,7 +107,7 @@ nav ul li {
   background: url(../src/images/laptop.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -348,6 +348,10 @@ nav ul li {
   opacity: 70%;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.popupbox-wrapper {
+  margin-top: 15rem;
 }
 
 /***** Popupbox *******/

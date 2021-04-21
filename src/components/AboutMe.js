@@ -4,7 +4,7 @@ import portrait from '../images/portrait.JPG'
 
 const AboutMe = () => {
   return (
-    <div className="about-me-wrapper">
+    <div id="about" className="about-me-wrapper">
       <div className="container py-5">
         <div className="row">
           <div className="col-lg-6 col-xm-12">
