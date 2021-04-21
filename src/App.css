@@ -468,6 +468,11 @@ textarea.form-control {
   margin: -0.3rem 0;
 }
 
+.success-message {
+  font-weight: 900;
+  color: var(--primary-green);
+}
+
 @media(max-width: 768px) {
   .contactme {
     overflow-x: hidden;
@@ -479,4 +484,27 @@ textarea.form-control {
   .contactme p {
     padding: 0 0.04rem;
   }
+}
+
+/***** Footer *******/
+
+.footer {
+  background: var(--primary-black);
+  color: var(--primary-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-green);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
 }

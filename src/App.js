@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 import ContactMe from './components/ContactMe'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <Resume />
       <Portfolio />
       <ContactMe />
+      <Footer />
 
     </>
   );
