@@ -357,6 +357,9 @@ nav ul li {
 
 .popupbox-wrapper {
   margin-top: 15rem;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 /***** Popupbox *******/
@@ -364,6 +367,7 @@ nav ul li {
 .portfolio-image-popupbox {
   width: 45rem;
   padding: 0 0.5rem;
+  /* overflow: auto; */
 }
 
 .hyper-link {
@@ -378,16 +382,6 @@ nav ul li {
 @media(max-width: 768px) {
   .portfolio-image-popupbox {
     width: 100%;
-  }
-}
-
-@media(max-height: 850px) {
-  .popupbox-wrapper {
-    height: 100% !important;
-
-  }
-  .portfolio-image-popupbox {
-    width: 30%;
   }
 }
 
