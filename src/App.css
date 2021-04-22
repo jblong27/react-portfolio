@@ -43,7 +43,7 @@ nav {
 .logo {
   width: 6rem;
   height: 6rem;
-  margin-left: -90px;
+  margin-left: 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
