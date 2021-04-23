@@ -1,6 +1,7 @@
 import React from 'react'
 import shsearch from '../images/projects/shsearch.PNG'
 import yesman from '../images/projects/yesman.png'
+import empdirectory from '../images/projects/empdirectory.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import { PopupboxManager, PopupboxContainer } from 'react-popupbox'
@@ -8,6 +9,29 @@ import 'react-popupbox/dist/react-popupbox.css'
 
 const Portfolio = () => {
 
+  const openPopupboxEmployeeDirectory = () => {
+    const content = (
+      <>
+        <img className="portfolio-image-popupbox" src={empdirectory} alt="Employee Directory..."/>
+        <p>This is an employee directory that allows a user to view their entire staff at once so they have quick access to their information.
+         The user can filter employees by name, email or phone number.</p>
+        <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/jblong27/employee-directory")}>
+        https://github.com/jblong27/employee-directory</a>
+        <br />
+        <b>Deployed:</b> <a className="hyper-link" onClick={() => window.open("https://jblong27.github.io/employee-directory/")}>
+        https://jblong27.github.io/employee-directory/</a>
+      </>
+    )
+    PopupboxManager.open({content})
+  }
+  const popupboxConfigEmployeeDirectory = {
+    titleBar: {
+      enable: true,
+      text: "Employee Directory"
+    },
+    fadeIn: true,
+    fadeInSpeed: 500
+  }
   const openPopupboxShsearch = () => {
     const content = (
       <>
@@ -37,8 +61,8 @@ const Portfolio = () => {
       <>
         <img className="portfolio-image-popupbox" src={yesman} alt="Superhero search project..."/>
         <p>An application that will present the user with a questionnaire that narrows down what activities we think the user may be interested in doing next.
-If the user doesn’t think we got it right, we have an input box for them to leave their own suggestion along with their email. 
-The user’s suggestion will be stored in our database for us to review and eventually be added to our own suggested activities, so our app can always be growing.</p>
+          If the user doesn’t think we got it right, we have an input box for them to leave their own suggestion along with their email. 
+          The user’s suggestion will be stored in our database for us to review and eventually be added to our own suggested activities, so our app can always be growing.</p>
         <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/jblong27/yes-man-app")}>
         https://github.com/jblong27/yes-man-app</a>
         <br />
@@ -62,6 +86,12 @@ The user’s suggestion will be stored in our database for us to review and even
         <h1 className="text-center py-5">Portfolio</h1>
         <div className="image-box-wrapper row justify-content-center">
 
+          <div className="portfolio-image-box" onClick={openPopupboxEmployeeDirectory}>
+            <img className="portfolio-image" src={empdirectory} alt="employee directory" />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+          </div>
+
           <div className="portfolio-image-box" onClick={openPopupboxShsearch}>
             <img className="portfolio-image" src={shsearch} alt="superhero search" />
             <div className="overflow"></div>
@@ -76,6 +106,7 @@ The user’s suggestion will be stored in our database for us to review and even
           </div>
         </div>
       </div>
+      <PopupboxContainer {...popupboxConfigEmployeeDirectory} />
       <PopupboxContainer {...popupboxConfigShsearch} />
       <PopupboxContainer {...popupboxConfigYesman} />
     </div>
