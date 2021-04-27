@@ -2,6 +2,7 @@ import React from 'react'
 import shsearch from '../images/projects/shsearch.PNG'
 import yesman from '../images/projects/yesman.png'
 import empdirectory from '../images/projects/empdirectory.png'
+import spotify from '../images/projects/spotify.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import { PopupboxManager, PopupboxContainer } from 'react-popupbox'
@@ -9,6 +10,29 @@ import 'react-popupbox/dist/react-popupbox.css'
 
 const Portfolio = () => {
 
+  const openPopupboxSpotify = () => {
+    const content = (
+      <>
+        <img className="portfolio-image-popupbox" src={spotify} alt="Spotify clone..."/>
+        <p>A Spotify clone built in React that also includes a lyric search for any song. 
+        This uses the Spotify Web API, react-spotify-web-playback for the player, and lyrics-finder API for the lyrics.</p>
+        <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/jblong27/spotify-react-clone")}>
+        https://github.com/jblong27/spotify-react-clone</a>
+        <br />
+        <b>Deployed:</b> <a className="hyper-link" onClick={() => window.open("https://infinite-basin-31399.herokuapp.com/")}>
+        https://infinite-basin-31399.herokuapp.com/</a>
+      </>
+    )
+    PopupboxManager.open({content})
+  }
+  const popupboxConfigSpotify = {
+    titleBar: {
+      enable: true,
+      text: "Spotify"
+    },
+    fadeIn: true,
+    fadeInSpeed: 500
+  }
   const openPopupboxEmployeeDirectory = () => {
     const content = (
       <>
@@ -86,12 +110,18 @@ const Portfolio = () => {
         <h1 className="text-center py-5">Portfolio</h1>
         <div className="image-box-wrapper row justify-content-center">
 
+          <div className="portfolio-image-box" onClick={openPopupboxSpotify}>
+            <img className="portfolio-image" src={spotify} alt="spotify clone" />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+          </div>
+          {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxEmployeeDirectory}>
             <img className="portfolio-image" src={empdirectory} alt="employee directory" />
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
-
+          {/* - */}
           <div className="portfolio-image-box" onClick={openPopupboxShsearch}>
             <img className="portfolio-image" src={shsearch} alt="superhero search" />
             <div className="overflow"></div>
@@ -106,6 +136,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      <PopupboxContainer {...popupboxConfigSpotify} />
       <PopupboxContainer {...popupboxConfigEmployeeDirectory} />
       <PopupboxContainer {...popupboxConfigShsearch} />
       <PopupboxContainer {...popupboxConfigYesman} />
