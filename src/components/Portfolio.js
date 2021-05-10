@@ -24,6 +24,13 @@ const Portfolio = () => {
       </>
     )
     PopupboxManager.open({content})
+      PopupboxManager.update({content,
+        config: {
+          titlebar: {
+            text: "Spotify Clone"
+          }
+        }
+      })
   }
   const popupboxConfigSpotify = {
     titleBar: {
@@ -46,7 +53,14 @@ const Portfolio = () => {
         https://jblong27.github.io/employee-directory/</a>
       </>
     )
-    PopupboxManager.open({content})
+    PopupboxManager.open({content});
+      PopupboxManager.update({content,
+        config: {
+          titlebar: {
+            text: "Employee Directory"
+          }
+        }
+      })
   }
   const popupboxConfigEmployeeDirectory = {
     titleBar: {
@@ -69,7 +83,14 @@ const Portfolio = () => {
         https://tsgrewing.github.io/Superhero-Search/</a>
       </>
     )
-    PopupboxManager.open({content})
+    PopupboxManager.open({content});
+      PopupboxManager.update({content,
+        config: {
+          titlebar: {
+            text: "Superhero Search"
+          }
+        }
+      })
   }
   const popupboxConfigShsearch = {
     titleBar: {
