@@ -26,12 +26,13 @@ const Portfolio = () => {
     PopupboxManager.open({content})
       PopupboxManager.update({content,
         config: {
-          titlebar: {
-            text: "Spotify Clone"
-          }
-        }
-      })
+          titleBar: {
+            text: "Spotify Clone",
+          },
+        },
+      });
   }
+
   const popupboxConfigSpotify = {
     titleBar: {
       enable: true,
@@ -56,11 +57,11 @@ const Portfolio = () => {
     PopupboxManager.open({content});
       PopupboxManager.update({content,
         config: {
-          titlebar: {
-            text: "Employee Directory"
-          }
-        }
-      })
+          titleBar: {
+            text: "Employee Directory",
+          },
+        },
+      });
   }
   const popupboxConfigEmployeeDirectory = {
     titleBar: {
@@ -84,13 +85,14 @@ const Portfolio = () => {
       </>
     )
     PopupboxManager.open({content});
-      PopupboxManager.update({content,
+      PopupboxManager.update({
+        content,
         config: {
-          titlebar: {
-            text: "Superhero Search"
-          }
-        }
-      })
+          titleBar: {
+            text: "Superhero Search",
+          },
+        },
+      });
   }
   const popupboxConfigShsearch = {
     titleBar: {
@@ -115,7 +117,15 @@ const Portfolio = () => {
         https://yes-man-app.herokuapp.com/</a>
       </>
     )
-    PopupboxManager.open({content})
+    PopupboxManager.open({content});
+    PopupboxManager.update({
+      content,
+      config: {
+        titleBar: {
+          text: "Yesman App",
+        },
+      },
+    });
   }
   const popupboxConfigYesman = {
     titleBar: {
@@ -157,10 +167,10 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <PopupboxContainer {...popupboxConfigSpotify} />
       <PopupboxContainer {...popupboxConfigEmployeeDirectory} />
-      <PopupboxContainer {...popupboxConfigShsearch} />
       <PopupboxContainer {...popupboxConfigYesman} />
+      <PopupboxContainer {...popupboxConfigShsearch} />
+      <PopupboxContainer {...popupboxConfigSpotify} />
     </div>
   )
 }
